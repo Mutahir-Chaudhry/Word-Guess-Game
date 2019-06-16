@@ -22,7 +22,13 @@
         //Input from Player code
         //Creating variable to store the guess from the player, inputed into the prompt created. 
         var guess = prompt("Guess a letter");
-        
+        //Creating if else statement for the possibilities of user input taken
+        //First if statement 
+        if (guess === null) {
+            break;
+        } else if (guess.length !== 1) {
+
+        }
         //Game Code
         //Player Progress
         //Input from Player
