@@ -13,8 +13,13 @@
     //Creating variable to keep track of the number of letters left to guess for the color chosen. It is set to the lengnth of the number of letters in the color chosen. 
     var remainingLetters = colors.length;
 
-    //Beginning the while loop required for the game js. 
+    //Beginning the while loop required for the game, set to run as long as there are missing letters left to be guessed in the word. 
     while (remainingLetters > 0) {
+        
+        //Creating a document.text to display player progress.
+        alert(arrayAnswer.join(" "));
+
+        //
         //Game Code
         //Player Progress
         //Input from Player
