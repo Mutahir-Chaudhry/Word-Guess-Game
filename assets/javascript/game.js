@@ -26,9 +26,15 @@
         //First if statement is if the user cancels, making their guess null. 
         if (guess === null) {
             break;
-        } else if (guess.length !== 1) {
-
+        } 
+        //This next part is particular to alerts, since we arent going off of sinlge key strokes just yet. For now, we want the basic game itself to work, whether we are displaying on the page or in alerts. Hence, this else if statement creates an alert if the user inputs anything longer than 1 letter. 
+        else if (guess.length !== 1) {
+            alert("Please enter just ONE letter!");
         }
+        //
+        else {
+            //We will update the game state with the users input
+        }   
         //Game Code
         //Player Progress
         //Input from Player
