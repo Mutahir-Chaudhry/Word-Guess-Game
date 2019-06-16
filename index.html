@@ -20,6 +20,11 @@
     //Creating variable to store the word to be used from the colors array. Using the Math.floor(Math.random) forula and set to run through the length of the entire array. 
     var word = words[Math.floor(Math.random()*colors.length)];
 
+    //Creating an array to capture the letters input by the user. Creating an empty array, we set a for loop within it to create as many _ as the length of the word chosen. 
+    var arrayAnswer = [];
+    for (var i = 0; i < colors.length; i++) {
+        arrayAnswer[i] = "_";
+    }
 
 
 
