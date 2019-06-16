@@ -19,7 +19,10 @@
         //Creating a document.text to display player progress.
         alert(arrayAnswer.join(" "));
 
-        //
+        //Input from Player code
+        //Creating variable to store the guess from the player, inputed into the prompt created. 
+        var guess = prompt("Guess a letter");
+        
         //Game Code
         //Player Progress
         //Input from Player
