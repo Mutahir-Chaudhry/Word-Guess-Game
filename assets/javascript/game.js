@@ -1,9 +1,12 @@
     //Creating an array of potential words to be used as the word to be guessed by the user.
     var colors = ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"];
     //Creating variable to store the word to be used from the colors array. Using the Math.floor(Math.random) forula and set to run through the length of the entire array. 
-    var randomizer = colors[Math.floor(Math.random()*colors.length)];
+    var randomizer = [Math.floor(Math.random()*colors.length)];
     //Creating array to hold the actual color chosen, storing it in the variable word. 
     var word = colors[randomizer];
+    // //
+    // console.log("word");
+    // console.log(word);
     
     //Creating variable to store user length
     var userLength = word.length
@@ -15,7 +18,7 @@
     var win = userLength;
 
     //creating variable for the letters within the color chosen
-    var letters = answer.split('');
+    var letters = word.split('');
 
     //Creating variable to store the number of attempts remaining
     var attemptsLeft = 10;
@@ -26,18 +29,35 @@
     //Creating varaible to store the users letter
     var userLetter = "";
 
-    //for loop within it to create as many _ as the length of the word chosen using the userDisplay array
+    //Creating variable to display wins and losses
+    var wins = 0;
+    var loses = 0;
+
+    //varaible for the initial function
+    var initial = function (){
     
+    //for loop within it to create as many _ as the length of the word chosen using the userDisplay array
     for (var a = 0; a < randomizer.length; a++) {
-        display [a] = "_";
+        userDisplay [a] = "_";
         output = output + userDisplay[a];
     }
-    //Creating variable to keep track of the number of letters left to guess for the color chosen. It is set to the lengnth of the number of letters in the color chosen. 
-    var remainingLetters = word.length;
+    document.getElementById("colors").innerHTML=output;
+    output="";
+}
+
+    var submission = funtion (){
+        output = "";
+        userLetter = $("letter").value;
+        $("letter").value = "";
+
+        for (var b = 0; b < word.length)
+    }
+    // // //Creating variable to keep track of the number of letters left to guess for the color chosen. It is set to the lengnth of the number of letters in the color chosen. 
+    // var remainingLetters = word.length;
     //Beginning the while loop required for the game, set to run as long as there are missing letters left to be guessed in the word. 
-    while (remainingLetters > 0) {
+    while (userLength > 0) {
         //Creating a document.text to display player progress.
-        alert(arrayAnswer.join(" "));
+        alert(userDisplay.join(" "));
         //Input from Player code
         //Creating variable to store the guess from the player, inputed into the prompt created. 
         var guess = prompt("Guess a letter");
@@ -54,8 +74,8 @@
         else { 
             for (var b = 0; b < randomizer.length; b++){
             if (randomizer[b] === guess) {
-                arrayAnswer[b] = guess;
-                remainingLetters--;
+                userDisplay[b] = guess;
+                userLength--;
             }
         }
             //We will update the game state with the users input
