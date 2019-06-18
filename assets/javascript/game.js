@@ -34,8 +34,8 @@
     //function for letter submitted
     var submission = function (){
         output = "";
-        userLetter = $("letter").value;
-        $("letter").value = "";
+        userLetter = document.getElementById("letter").value;
+        document.getElementById("letter").value = "";
 
         for (var b = 0; b < word.length; b++){
             alert (letters[b]);
@@ -61,7 +61,10 @@
             document.getElementById("guesses").innerHTML = "You have " + attemptsLeft + "guesses left";
         }
     }
-
+window.onload = function(){
+    initial();
+    document.getElementById("submission").onclick=submit;
+}
     
     // // // //Creating variable to keep track of the number of letters left to guess for the color chosen. It is set to the lengnth of the number of letters in the color chosen. 
     // // var remainingLetters = word.length;
