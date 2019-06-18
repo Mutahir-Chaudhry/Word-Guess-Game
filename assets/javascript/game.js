@@ -5,6 +5,9 @@
     //Creating array to hold the actual color chosen, storing it in the variable word. 
     var word = colors[randomizer];
     
+    //Creating variable to store user length
+    var userLength = word.length
+    
     //Creating an array to capture the letters input by the user. Creating an empty array, we set a for loop within it to create as many _ as the length of the word chosen. 
     var arrayAnswer = [];
     for (var a = 0; a < randomizer.length; a++) {
