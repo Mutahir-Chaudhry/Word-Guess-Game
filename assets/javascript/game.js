@@ -14,6 +14,9 @@
     //Creating variable for win
     var win = userLength;
 
+    //creating variable for the letters within the color chosen
+    var letters = answer.split('');
+
     //Creating an array to capture the letters input by the user. Creating an empty array, we set a for loop within it to create as many _ as the length of the word chosen. 
     var arrayAnswer = [];
     for (var a = 0; a < randomizer.length; a++) {
