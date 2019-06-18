@@ -8,7 +8,7 @@
     //Creating variable to store user length
     var userLength = word.length
 
-    //Creating variable for the user display. 
+    //Creating an array for the user display. 
     var userDisplay = [userLength]
 
     //Creating variable for win
@@ -20,10 +20,17 @@
     //Creating variable to store the number of attempts remaining
     var attemptsLeft = 10;
 
-    //Creating an array to capture the letters input by the user. Creating an empty array, we set a for loop within it to create as many _ as the length of the word chosen. 
-    var arrayAnswer = [];
+    //Creating variable to combine and present display 
+    var output = "";
+
+    //Creating varaible to store the users letter
+    var userLetter = "";
+
+    //for loop within it to create as many _ as the length of the word chosen using the userDisplay array
+    
     for (var a = 0; a < randomizer.length; a++) {
-        arrayAnswer[a] = "_";
+        display [a] = "_";
+        output = output + userDisplay[a];
     }
     //Creating variable to keep track of the number of letters left to guess for the color chosen. It is set to the lengnth of the number of letters in the color chosen. 
     var remainingLetters = word.length;
