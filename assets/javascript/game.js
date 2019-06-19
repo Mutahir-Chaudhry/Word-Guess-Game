@@ -50,7 +50,7 @@
         attemptsLeft--;
         if (win > 1)
         {
-            document.getElementById("guesses").innerHTML = "You Win";
+            document.getElementById("guesses").innerHTML = win;
         }
         else if (attemptsLeft < 1)
         {
@@ -61,9 +61,14 @@
             document.getElementById("guesses").innerHTML = "You have " + attemptsLeft + "guesses left";
         }
     }
+
+if (userLength === word.length){
+    win++;
+}
+
 window.onload = function(){
     initial();
-    document.getElementById("submission").onclick=submit;
+    document.getElementById("submission").onclick=submission;
 }
     
     // // // //Creating variable to keep track of the number of letters left to guess for the color chosen. It is set to the lengnth of the number of letters in the color chosen. 
