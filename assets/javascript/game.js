@@ -24,7 +24,7 @@
     //varaible for the initial function
     var initial = function (){
     //for loop within it to create as many _ as the length of the word chosen using the userDisplay array
-    for (var a = 0; a < randomizer.length; a++) {
+    for (var a = 0; a < word.length; a++) {
         userDisplay [a] = "_";
         output = output + userDisplay[a];
     }
